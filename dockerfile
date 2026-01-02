@@ -8,7 +8,7 @@ WORKDIR /Structured_enquiry
 COPY . .
 
 # Install pytest (and any other dependencies)
-RUN pip install --no-cache-dir pytest
+RUN pip install pytest
 
 # Default command (can be your Python program)
 CMD ["python", "student.py"]
