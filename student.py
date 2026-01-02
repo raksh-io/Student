@@ -1,5 +1,3 @@
-import sys
-
 def calculate_grade(avg):
     if 90 <= avg <= 100:
         return "S"
@@ -28,22 +26,20 @@ def print_grade_table():
     print("+------------+---------+")
 
 def main():
-    if len(sys.argv) < 7:
-        print("Usage: python student.py <name> <department> <semester> <m1> <m2> <m3>")
-        sys.exit(1)
+    # 🔹 TAKE INPUT FROM USER
+    name = input("Enter Student Name: ")
+    department = input("Enter Department: ")
+    semester = input("Enter Semester: ")
 
-    name = sys.argv[1]
-    department = " ".join(sys.argv[2:-4])
-    semester = sys.argv[-4]
-
-    marks1 = int(sys.argv[-3])
-    marks2 = int(sys.argv[-2])
-    marks3 = int(sys.argv[-1])
+    marks1 = int(input("Enter Marks 1: "))
+    marks2 = int(input("Enter Marks 2: "))
+    marks3 = int(input("Enter Marks 3: "))
 
     average = (marks1 + marks2 + marks3) / 3
     grade = calculate_grade(average)
 
     # ✅ PRINT TABLE FIRST
+    print("\n")
     print_grade_table()
 
     # ✅ THEN PRINT STUDENT DETAILS
