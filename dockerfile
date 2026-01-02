@@ -1,8 +1,14 @@
+# Use Python 3.14 base image
 FROM python:3.14
 
+# Set working directory inside the container
 WORKDIR /Structured_enquiry
 
+# Copy all files from your project to the container
 COPY . .
-RUN pip install pytest
-# Set student.py as the default command
-ENTRYPOINT ["python", "student.py"]
+
+# Install pytest (and any other dependencies)
+RUN pip install --no-cache-dir pytest
+
+# Default command (can be your Python program)
+CMD ["python", "student.py"]
