@@ -10,5 +10,6 @@ COPY . .
 # Install pytest (and any other dependencies)
 RUN pip install pytest
 
+RUN pytest --junitxml=report.xml
 # Default command (can be your Python program)
 CMD ["python", "student.py"]
