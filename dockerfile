@@ -6,5 +6,5 @@ COPY . .
 
 RUN pip install pytest
 
-# Run tests first
+# Run pytest AND generate report.xml
 CMD ["sh", "-c", "pytest --junitxml=/Structured_enquiry/report.xml && python student.py"]
