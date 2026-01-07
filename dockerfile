@@ -7,4 +7,4 @@ COPY . .
 RUN pip install pytest
 
 # Run pytest AND generate report.xml
-CMD ["python","student.py"]
+ENTRYPOINT ["python","student.py"]
